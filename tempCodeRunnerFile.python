@@ -1,0 +1,11 @@
+import pandas as pd
+
+PATH = "C:/Users/hp/Downloads/audi.csv"
+
+df_missing = pd.read_csv(PATH)
+
+print("Jumlah missing value per kolom:")
+print(df_missing.isnull().sum())
+
+print("Baris yang memiliki missing value:")
+display(df_missing[df_missing.isnull().any(axis=1)])
